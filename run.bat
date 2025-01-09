@@ -1,0 +1,2 @@
+cd "../.."
+"word factori.exe"
