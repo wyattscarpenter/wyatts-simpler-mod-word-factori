@@ -1,0 +1,46 @@
+{
+  "include_vanilla": false,
+  "specials": [],
+  "oMerger2": {
+    "V2 V2": "M",
+    "C C01": "O",
+    "V V": "W",
+    "V V2": "X",
+    "V1 V3": "X",
+    "X X": "≠",
+    "I I": "V",
+  },
+  "oMerger3": {
+    "I I I": "Q",
+  },
+  "oMerger4": {
+  },
+  "oBend": {
+    "V": "U",
+    "V3": "C",
+    "U": "__O",
+    "Q": "C",
+  },
+  "oReflect_hor": {
+    
+  },
+  "oReflect_vert": {
+
+  },
+  "oRotate_cw": {
+
+  },
+  "oRotate_ccw": {
+
+  },
+  "oIFactory": {
+    "I": "I",
+  },
+  "horizontal_symmetries": ["V", "W", "M", "X", "O", "U"],
+  "vertical_symmetries": ["X", "O", "C"],
+  "rotate4_symmetries": ["X", "O"],
+  "rotate2_symmetries": ["≠"],
+  "aliases": {
+    "M2": "W",
+  }
+}

@@ -1,0 +1,94 @@
+[
+	[
+		"how to mod",
+		"So you want to make your own mod? First let's get a sense for the files you can modify.",
+		"The files for this example mod are located at the following directory:",
+		"\"%localappdata%\\factori\\mods\\modding tutorial\"",
+		"and they override the default files.",
+		"These files are written in JSON, if you're new to JSON I recommend using jsonlint.com to test your JSON files while working on your mod",
+		"We'll start with recipes.json (go ahead and open it so you can follow along).",
+		"According to that file, this mod has the oIFactory outputting V.",
+		"Use that to solve the level."
+	],
+	[
+		"recipes 101",
+		"recipes.json lets you specify the outputs for each building.",
+		"You can also set include_vanilla to true if you want to include the recipes from the base game.",
+		"Otherwise you'll be starting from scratch.",
+		"The entries are formatted as \"input1 input2 ...\": \"output\"",
+		"For example, the bender can bend a V into a U, so that's \n\"V\": \"U\"",
+		"And the double merger can make a W out of 2 Vs, so that's \n\"V V\": \"W\"",
+		"If you want to start editing the files, you can copy the \"modding tutorial\" folder and make a new one with the name of your mod (you can edit modding tutorial directly; it resets itself on every game start)."
+	],
+	[
+		"rotations & reflections",
+		"You can represent rotations and reflections by adding numbers to the inputs. Here are some examples:",
+		"C1 = C rotated 90 degrees counter clockwise",
+		"R01 = R flippped horizontally",
+		"L31 = flip L horizontally and then rotated 270 degrees counter clockwise (the engine always applies mirroring first, despite it being the second number!)",
+		"Vertical mirrors aren't directly represented, but 21 (horizontal mirror then 180 turn) is always equivalent to a vertical mirror.",
+		"For example, one of the double merger recipes is \n\"V V2\": \"X\""
+	],
+	[	
+		"symmetries",
+		"For the previous level, you could have horizontally mirrored either of the X inputs and it still would have worked.",
+		"That's because V is in the horizontal symmetries list (meaning you can horizontally mirror V and the game understands that it's still looks identicial).",
+		"Here are the other symmetries:",
+		"- horizontal_symmetry: horizontal mirrors don't change the letter (ex. V)\n- vertical_symmetretry: vertical mirrors don't change the letter (ex. E)\n- rotate2_symmetry: 180 degree rotations don't change the letter (ex. N)\n- rotate4_symmetry: 90 degree rotations don't change the letter (ex. O)",
+		"A byproduct of the horizontal symmetry is you can use vertically flip V instead of V2 and the game understands that it's the same, but it's a little hard to see.",
+		"Give it a try!"
+	],
+	[
+		"aliases",
+		"If you have similar looking letters that are rotations of each other you can define them using aliases.",
+		"We didn't opt to include this in the main game, but if you wanted W = rotated M you could specify \"M2\":\"W\"",
+		"This effectively removes W from the game, and the game will always interpret W as a 180 rotated M",
+		"NOTE: oReflect_hor, oReflect_vert, is a similar feature, but it's more of a legacy option at this point. We recommend using aliases instead."
+	],
+	[
+		"specials & hidden recipes",
+		"Some recipes aren't listed in your book until you find them.",
+		"If you don't want an output letter to show up at all, you can put it in the specials list (for this mod I added not equals).",
+		"If you have some difficult or obscure recipes, you can hide them using __ (for example bend has \"U\": \"__O\")"
+	],
+	[
+		"fonts",
+		"phew, we're done chatting about recipes.json.",
+		"Another handy thing is to include a Letters.ttf file with the font you want for your mod.",
+		"In this case the default font doesn't support not equals, so I added a different font that did.",
+		"Feel free to check recipes.json for the solution. It's definitely kind of weird."
+	],
+	[
+		"levels",
+		"You can define all your levels in levels.json.",
+		"Each level can be either a string (in quotes), or a JSON object/dictionary.",
+		"Using the objects let you define building limits so that you can create challenge levels.",
+		"The building names are the same as in recipes.json, just without the o prefix."
+	],
+	[
+		"stickers",
+		"You can also add your own sticker art in the stickers folder.",
+		"In order for them to work you also need to specify the sticker aliases in stamp_aliases.json.",
+		"In this case the player could solve the word COW or OX, and either one will grant them the RedOX sticker.",
+		"Just keep in mind that the game expects all stickers to be 256x256.",
+		"Also, the stickers respect the include_vanilla flag from recipes.json, so setting that to true will reuse the 100+ stickers from the base game.",
+		"If you borrow images be sure to credit them appropriotely using credits.json."
+	],
+	[
+		"title, preview & tips",
+		"I don't have a great level for this, but the title.png & preview.png is also good to know about.",
+		"Replacing title.png will update the logo on the slot select screen as well as the menu.",
+		"Replacing preview.png will update the thumbnail for steam workshop (the 'background only' version isn't used by the game, it's just available in case you want it).",
+		"The last file to know about is the tips.json.",
+		"That's what you're reading now, and I strongly recommend including them so that your mod is easier to follow."
+	],
+	[
+		"making & sharing your own mod",
+		"To start you can copy the \"modding tutorial\" folder and make a new one with the name of your mod.",
+		"Then you can select the mod in the slot menu (after game restart).",
+		"Once you've edited the files and your mod is complete, you can submit it to Steam Workshop using ctrl + M.",
+		"Once it's on Steam Workshop, be sure to edit your title & images before making it public.",
+		"You can also make your mod available to itch.io users by using this form https://forms.gle/5CSrNo3SMXuo8fcX6",
+		"Just copy your modding folder to Google Drive or Dropbox and post the link in the form."
+	]
+]

@@ -1,0 +1,15 @@
+[
+  "\\", //note that this is a \
+  "-",
+  "//",
+  "V",
+  { //this is how you do challenge levels. I don't care about those, so I won't.
+    "text": "X",
+    "module_counts": {
+      "Reflect_vert": 0,
+      "Rotate_ccw": 1,
+      "Rotate_cw": 1,
+    }
+  },
+  "Y",
+]
