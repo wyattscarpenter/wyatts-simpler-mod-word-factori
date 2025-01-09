@@ -32,7 +32,7 @@
 	[	
 		"symmetries",
 		"For the previous level, you could have horizontally mirrored either of the X inputs and it still would have worked.",
-		"That's because V is in the horizontal symmetries list (meaning you can horizontally mirror V and the game understands that it's still looks identicial).",
+		"That's because V is in the horizontal symmetries list (meaning you can horizontally mirror V and the game understands that it still looks identical).",
 		"Here are the other symmetries:",
 		"- horizontal_symmetry: horizontal mirrors don't change the letter (ex. V)\n- vertical_symmetretry: vertical mirrors don't change the letter (ex. E)\n- rotate2_symmetry: 180 degree rotations don't change the letter (ex. N)\n- rotate4_symmetry: 90 degree rotations don't change the letter (ex. O)",
 		"A byproduct of the horizontal symmetry is you can use vertically flip V instead of V2 and the game understands that it's the same, but it's a little hard to see.",
