@@ -1,40 +1,44 @@
 {
   "include_vanilla": false,
-  "specials": [],
+  "specials": [], //no specials
   "oMerger2": {
     "V2 V2": "M",
     "C C01": "O",
     "V V": "W",
     "V V2": "X",
     "V1 V3": "X",
-    "X X": "≠",
-    "I I": "V",
+    "- V3": "A",
   },
   "oMerger3": {
-    "I I I": "Q",
+    
   },
   "oMerger4": {
   },
   "oBend": {
     "V": "U",
     "V3": "C",
-    "U": "__O",
-    "Q": "C",
   },
   "oRotate_cw": {
-
+    "I": "/",
+    "/": "-",
+    "-": "\\",
+    "\\": "I",
   },
   "oRotate_ccw": {
-
+    "I": "\\",
+    "/": "I",
+    "-": "/",
+    "\\": "-",
   },
   "oIFactory": {
     "I": "I",
   },
-  "horizontal_symmetries": ["V", "W", "M", "X", "O", "U"],
+  "horizontal_symmetries": ["W", "T", "Y", "U", "I", "O", "A", "H", "X", "V", "M", "-"],
   "vertical_symmetries": ["X", "O", "C"],
   "rotate4_symmetries": ["X", "O"],
   "rotate2_symmetries": ["≠"],
-  "aliases": {
+  "aliases": { // my first instinct was to make I just alias - \ and /, but that messed up the flippers.
     "M2": "W",
+    "C1": "U",
   }
 }
