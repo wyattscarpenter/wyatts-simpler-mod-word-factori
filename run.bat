@@ -1,2 +1,2 @@
-cd "../.."
-"word factori.exe"
+cd ../..
+"word factori"
