@@ -72,7 +72,7 @@
 		"In this case the player could solve the word COW or OX, and either one will grant them the RedOX sticker.",
 		"Just keep in mind that the game expects all stickers to be 256x256.",
 		"Also, the stickers respect the include_vanilla flag from recipes.json, so setting that to true will reuse the 100+ stickers from the base game.",
-		"If you borrow images be sure to credit them appropriotely using credits.json."
+		"If you borrow images be sure to credit them appropriately using credits.json."
 	],
 	[
 		"title, preview & tips",
