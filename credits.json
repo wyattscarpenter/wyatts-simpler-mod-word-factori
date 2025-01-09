@@ -4,11 +4,13 @@
     "Word Factori",
     "by Star Garden Games",
     "https://stargardengames.com/word-factori",
-  ],
-  "RightPage": [
+    "\n",
     "# Wyatt's Simpler Mod",
     "Wyatt S Carpenter",
-    "# Github repo",
+    "## Github repo",
     "https://github.com/wyattscarpenter/wyatts-simpler-mod-word-factori",
+  ],
+  "RightPage": [
+    "this page intentionally left blank"
   ]
 }
